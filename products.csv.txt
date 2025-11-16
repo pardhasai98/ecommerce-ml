@@ -1,0 +1,4 @@
+id,name,category,price,image
+1,Red T-Shirt,Shirts,20,red_tshirt.jpg
+2,Blue Jeans,Jeans,40,blue_jeans.jpg
+3,Black Hoodie,Hoodies,35,black_hoodie.jpg

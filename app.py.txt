@@ -1,0 +1,31 @@
+from flask import Flask, render_template
+from models import db, Product
+from ml_model import recommend
+import pandas as pd
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecommerce.db'
+db.init_app(app)
+
+@app.before_first_request
+def create_tables():
+    db.create_all()
+    if Product.query.count() == 0:
+        df = pd.read_csv('products.csv')
+        for _, row in df.iterrows():
+            db.session.add(Product(id=row['id'], name=row['name'], category=row['category'],
+                                   price=row['price'], image=row['image']))
+        db.session.commit()
+
+@app.route('/')
+def home():
+    products = Product.query.all()
+    return render_template('index.html', products=products)
+
+@app.route('/product/<name>')
+def product_detail(name):
+    recommendations = recommend(name)
+    return render_template('product.html', product=name, recommendations=recommendations)
+
+if __name__ == "__main__":
+    app.run(debug=True)
