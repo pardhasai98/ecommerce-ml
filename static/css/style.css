@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 180px;
+}
