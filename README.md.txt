@@ -1,18 +1,28 @@
-# E-Commerce Website with Machine Learning Recommendations
+# E-Commerce Shopping Website 🛒
 
-This project is a web-based platform for online clothes shopping built with Python, Flask, SQLite, and Machine Learning.
+A feature-rich e-commerce web application that allows users to browse products, view details, and manage their shopping cart. This project also includes a machine learning-based recommendation system to enhance the shopping experience.
 
-## Features
-- Browse clothes by categories
-- View product details
-- ML-based recommendations for similar products
+---
 
-## Technologies
-- Python, Flask, SQLite, scikit-learn, pandas, HTML, CSS
+## Features 
 
-## Setup
-1. Clone repo
-2. Create virtual environment: `python -m venv venv`
-3. Activate env and install dependencies: `pip install -r requirements.txt`
-4. Run: `python app.py`
-5. Open: `http://127.0.0.1:5000/`
+- Browse products by categories
+- View detailed product pages
+- Add products to shopping cart
+- Machine Learning-based product recommendations
+- Clean and responsive UI
+
+---
+
+## Tech Stack 
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python, Flask
+- **Database:** (If you used one, e.g., SQLite, MySQL, or MongoDB)
+- **Machine Learning:** (Briefly mention if you have ML model, e.g., product recommendation)
+- **Other:** Requirements managed with `requirements.txt`
+
+---
+
+## Folder Structure 
+
