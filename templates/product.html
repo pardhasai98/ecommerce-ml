@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product }}</title>
+</head>
+<body>
+    <h1>{{ product }}</h1>
+    <h3>Recommended Products:</h3>
+    <ul>
+        {% for item in recommendations %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
